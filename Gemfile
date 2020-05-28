@@ -6,6 +6,9 @@ ruby '2.6.1'
 gem 'dotenv-rails'
 gem 'pry'
 gem 'fast_jsonapi'
+# gem 'foreman'
+# gem 'rails_12factor'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.2'
