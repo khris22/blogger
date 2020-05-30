@@ -3,6 +3,7 @@ class CreateEntries < ActiveRecord::Migration[6.0]
     create_table :entries do |t|
       t.string :title
       t.text  :notes
+      t.integer :user_id
       t.timestamps
     end
   end

@@ -8,3 +8,7 @@
 
 
 User.create(username:"kp", email:"kp@mail.com", password:"1234")
+
+Entry.create(title:"Awesome Time", notes:"A blog about having an awesome time every time...", user_id: 1)
+
+Comment.create(content:"Hey, this is great", user_id: 1, entry_id: 1)
