@@ -8,6 +8,8 @@
 
 
 User.create(username:"kp", email:"kp@mail.com", password:"1234")
+User.create(username:"sd", email:"sd@mail.com", password:"1234")
+User.create(username:"mac", email:"mac@mail.com", password:"1234")
 
 Entry.create(title:"Awesome Time", notes:"A blog about having an awesome time every time...", user_id: 1)
 
