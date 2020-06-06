@@ -9,7 +9,7 @@ class Api::V1::UsersController < ApplicationController
 
     # GET /users/1
   def show
-    user_json = UserSerializer.new(@user).serialized_json
+    user_json = UserSerializer.new(@user)
     render json: user_json, status: 200
   end
 
