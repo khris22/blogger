@@ -5,5 +5,6 @@ class Entry < ApplicationRecord
     validates :title, presence: true
     validates :notes, presence: true
 
+    validates :title, uniqueness: true
 
 end
