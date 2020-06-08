@@ -4,7 +4,7 @@ class UserSerializer
   # do I still need this when I have customization below?
   # has_many :entries
   # does not have other attributes:
-  # has_many :entries, serializer: EntrySerializer
+  has_many :entries, serializer: EntrySerializer
   
   # customiziong your attributes
   attribute :entries do |user|
