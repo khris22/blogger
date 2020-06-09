@@ -1,10 +1,10 @@
 class Api::V1::EntriesController < ApplicationController
 
     def index
-        binding.pry
+        # binding.pry
         if logged_in?
-            @entries = current_user.entries
-            render json: @entries
+            entries = current_user.entries
+            render json: EntrySerializer.new(entries)
         else
             render json: {
                 error: "You must be logged in to see blog entries"
