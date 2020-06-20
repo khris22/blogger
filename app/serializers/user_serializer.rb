@@ -3,10 +3,11 @@ class UserSerializer
   attributes :username
   # do I still need this when I have customization below?
   # has_many :entries
-  # does not have other attributes:
-  has_many :entries, serializer: EntrySerializer
   
-  # customiziong your attributes
+  # does not have other attributes:
+  # has_many :entries, serializer: EntrySerializer
+  
+  # customizing your attributes
   attribute :entries do |user|
     user.entries.map do |entry| {
       title: entry.title,
