@@ -1,6 +1,6 @@
 class Api::V1::EntriesController < ApplicationController
 
-    before_action :set_trip, only: [:show, :update, :destroy]
+    before_action :set_entry, only: [:show, :update, :destroy]
 
 
     def index
@@ -34,6 +34,15 @@ class Api::V1::EntriesController < ApplicationController
     end
 
     def update
+        # byebug
+        if @entry.update(entry_params)
+            render json:  EntrySerializer.new(@entry), status: :ok
+          else
+            error_resp = {
+              error: @error.errors.full_messages.to_sentence
+            }
+            render json: error_resp, status: :unprocessable_entity
+        end
     end
 
     def destroy
