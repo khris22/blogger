@@ -46,6 +46,15 @@ class Api::V1::EntriesController < ApplicationController
     end
 
     def destroy
+      if @entry.destroy
+        # change data in future
+        render json:  { data: "Entry successfully destroyed" }, status: :ok
+      else
+        error_resp = {
+          error: "Entry unsuccessfully destroyed"
+        }
+        render json: error_resp, status: :unprocessable_entity
+      end
     end
 
     private
